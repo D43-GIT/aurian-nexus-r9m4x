@@ -116,7 +116,8 @@ section.s{padding:72px 0;scroll-margin-top:72px}
 .rows div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:17px;color:var(--bone3)}
 .rows b{color:var(--bone);font-weight:600;text-align:right}
 .plan .btn{margin-top:4px}
-@media (min-width:900px){.plans{grid-template-columns:repeat(3,1fr);align-items:stretch}}
+@media (min-width:900px){.plans{grid-template-columns:repeat(2,1fr);align-items:stretch}}
+@media (min-width:1100px){.plans{grid-template-columns:repeat(4,1fr)}}
 
 /* every plan */
 .ticks{display:grid;gap:12px;list-style:none;margin:0;padding:0}
@@ -176,7 +177,7 @@ footer p+p{margin-top:8px}
 .opt h3{font-size:26px;font-weight:600}
 .opt .big{font-family:var(--serif);font-size:58px;line-height:.9;color:var(--gold2);white-space:nowrap}
 .opt p{color:var(--bone2)}
-.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
 .mini div{background:var(--ink);border-radius:12px;padding:12px;font-size:16px;color:var(--bone3);line-height:1.35;min-width:0}
 .mini b{display:block;color:var(--bone);font-size:21px;font-weight:600;font-variant-numeric:tabular-nums}
 .opt ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
@@ -275,7 +276,8 @@ footer p+p{margin-top:8px}
 <div class="lockbar"><div class="wrap">
   <svg class="i"><use href="#i-lock"/></svg>
   <span><b>Private page for Ricky Morgan, Nexus Marketing.</b> Clients get the client link.</span>
-  <button class="btn gold sm sp" type="button" data-copy="https://d43-git.github.io/aurian-guide-k7q2/#property"><svg class="i"><use href="#i-copy"/></svg><span>Copy client link</span></button>
+  <button class="btn gold sm sp" type="button" data-copy="https://d43-git.github.io/aurian-guide-k7q2/#brands" data-label="Copy brands link"><svg class="i"><use href="#i-copy"/></svg><span>Copy brands link</span></button>
+  <button class="btn gold sm" type="button" data-copy="https://d43-git.github.io/aurian-guide-k7q2/#property" data-label="Copy property link"><svg class="i"><use href="#i-copy"/></svg><span>Copy property link</span></button>
 </div></div>
 
 <header class="bar" id="bar">
@@ -317,6 +319,7 @@ footer p+p{margin-top:8px}
         <div class="ot"><div><div class="k">Option 1</div><h3>Referral</h3></div><div class="big">10%</div></div>
         <p>You introduce. We sell and make it as Aurian Haus. You get 10% of what the client pays, before GST, for their first 12 months. Property jobs too.</p>
         <div class="mini">
+          <div>Starter Lite<b>A$200</b>a month<br>A$2,400 a year</div>
           <div>Starter<b>A$254</b>a month<br>A$3,049 a year</div>
           <div>Growth<b>A$345</b>a month<br>A$4,140 a year</div>
           <div>Scale<b>A$590</b>a month<br>A$7,085 a year</div>
@@ -330,9 +333,10 @@ footer p+p{margin-top:8px}
         <div class="ot"><div><div class="k">Option 2</div><h3>White-label</h3></div><div class="big">15% off</div></div>
         <p>You sell as Nexus Marketing. We stay behind the scenes. Buy at 15% off, sell at our price or above.</p>
         <div class="mini">
-          <div>Starter<b>A$2,376</b>you pay a month</div>
-          <div>Growth<b>A$3,226</b>you pay a month</div>
-          <div>Scale<b>A$5,521</b>you pay a month</div>
+          <div>Starter Lite<b>A$1,870</b>you pay a month, incl GST</div>
+          <div>Starter<b>A$2,376</b>you pay a month, incl GST</div>
+          <div>Growth<b>A$3,226</b>you pay a month, incl GST</div>
+          <div>Scale<b>A$5,521</b>you pay a month, incl GST</div>
         </div>
         <ul>
           <li><svg class="i"><use href="#i-check"/></svg><span>You pay within 7 days of our invoice, even if your client is late.</span></li>
@@ -394,7 +398,7 @@ footer p+p{margin-top:8px}
 
 <section class="s" id="films">
   <div class="wrap">
-    <div class="sh rv"><h2>Real jobs</h2><p>Every frame made with AI, then checked by us.</p></div>
+    <div class="sh rv"><h2>Examples</h2><p>Every frame made with AI, then checked by us.</p></div>
     <div class="reel rv">
       <figure style="background-image:url('media/frequency-hypermotion-poster.webp')"><video muted loop playsinline preload="none" poster="media/frequency-hypermotion-poster.webp" src="media/frequency-hypermotion-m.mp4"></video><span class="cap">Skincare</span></figure>
       <figure style="background-image:url('media/sol-blender-film-poster.webp')"><video muted loop playsinline preload="none" poster="media/sol-blender-film-poster.webp" src="media/sol-blender-film-m.mp4"></video><span class="cap">Kitchen</span></figure>
@@ -422,19 +426,12 @@ footer p+p{margin-top:8px}
 
 <div class="lane" data-lane="property" id="property">
 <div class="lanehead wrap rv"><span class="eyebrow">Property</span><h2>See your building <em>before it's built.</em></h2>
-  <p class="lede">Artist's impressions, made from the developer's plans. Drag to see it.</p>
-  <div class="ba" id="ba">
-    <img src="media/prop-site-today.webp" alt="Real drone photo of the site today, an empty block with a crane">
-    <img class="after" src="media/prop-site-built.webp" alt="The same street at sunrise with the new building in place, an AI concept">
-    <span class="tagl">Real photo today</span><span class="tagr">AI concept</span>
-    <span class="handle"></span>
-    <input type="range" min="0" max="100" value="50" aria-label="Drag to compare today and the AI concept" id="baslider">
-  </div>
+  <p class="lede">Artist's impressions, made from the developer's plans.</p>
 </div>
 
 <section class="s" id="pfilms">
   <div class="wrap">
-    <div class="sh rv"><h2>Real jobs</h2><p>Every film is labelled "AI concept film".</p></div>
+    <div class="sh rv"><h2>Examples</h2><p>Every film is labelled "AI concept film".</p></div>
     <div class="reel wide rv">
       <figure style="background-image:url('media/prop-drone-sunrise-poster.webp')"><video muted loop playsinline preload="none" poster="media/prop-drone-sunrise-poster.webp" src="media/prop-drone-sunrise-m.mp4"></video><span class="cap">Sunrise drone</span></figure>
       <figure style="background-image:url('media/prop-terrace-poster.webp')"><video muted loop playsinline preload="none" poster="media/prop-terrace-poster.webp" src="media/prop-terrace-m.mp4"></video><span class="cap">Terrace</span></figure>
@@ -479,14 +476,14 @@ footer p+p{margin-top:8px}
       <article class="plan rv">
         <div class="pn"><h3>Monthly</h3></div>
         <p class="for">Fresh films every month, same look.</p>
-        <div class="price">A$2,795<small>a month, from</small></div>
-        <ul><li><svg class="i"><use href="#i-check"/></svg><span>Starter A$2,795 · Growth A$3,795 · Scale A$6,495</span></li><li><svg class="i"><use href="#i-check"/></svg><span>Short videos and photos</span></li><li><svg class="i"><use href="#i-check"/></svg><span>3 months minimum, then 30 days notice</span></li></ul>
+        <div class="price"><small style="margin:0 6px 0 0">From</small>A$2,795<small>a month</small></div>
+        <ul><li><svg class="i"><use href="#i-check"/></svg><span><b>Starter A$2,795:</b> 1 film of 30 s, 3 re-cuts, 2 hooks, 4 carousels</span></li><li><svg class="i"><use href="#i-check"/></svg><span><b>Growth A$3,795:</b> 1 film of 30 s, 5 re-cuts, 6 hooks, 5 carousels</span></li><li><svg class="i"><use href="#i-check"/></svg><span><b>Scale A$6,495:</b> films of 30 s + 15 s, 8 re-cuts, 10 hooks, 8 carousels</span></li><li><svg class="i"><use href="#i-check"/></svg><span>3 months minimum, then 30 days notice</span></li></ul>
         <a class="btn line" href="#talk">Talk monthly</a>
       </article>
     </div>
     <div class="agent rv">
-      <div><div class="k">For agents</div><h3>Listing hooks</h3><p>3 AI openers that stop the scroll, added to your listing video.</p></div>
-      <div class="price">A$495<small>a listing</small></div>
+      <div><div class="k">For agents</div><h3>Listing hooks</h3><p>3 AI openers that stop the scroll, added to your listing video. Made for that home, not a template AI slideshow, so buyers stop and watch.</p></div>
+      <div class="price">A$395<small>a listing</small></div>
     </div>
   </div>
 </section>
@@ -533,13 +530,14 @@ footer p+p{margin-top:8px}
 <footer>
   <div class="wrap">
     <p><b>Brandon Hansen</b> · 0400 357 305 · hello@aurianhaus.com · aurianhaus.com · Instagram @aurianhaus</p>
-    <p>Prices in Australian dollars and include any GST. Monthly is about US$1,962, US$2,664 and US$4,559 (rate on 27 Oct 2026). Ad spend not included. Aurian Haus is a trading name of The Trustee for House of Hansen Trust, ABN 80 287 120 663.</p>
+    <p>Prices in Australian dollars and include any GST. Monthly is about US$1,546, US$1,965, US$2,668 and US$4,566 (rate on 28 Oct 2026). Ad spend not included. Aurian Haus is a brand operated by The Trustee for House of Hansen Trust, ABN 80 287 120 663.</p>
   </div>
 </footer>
 
 <script>
 (function(){
 const P=[
+ {n:'Starter Lite',for:'One premium idea, posted twice a week.',mo:'A$2,200',one:null,lite:1,hero:'30 s',re:'3',hk:'None',ca:'4',ch:'Reuse yours',ci:'By message',rd:'10 work days'},
  {n:'Starter',for:'One product, testing the water.',mo:'A$2,795',one:'A$3,695',hero:'30 s',re:'3',hk:'2',ca:'4',ch:'Reuse yours',ci:'By message',rd:'10 work days'},
  {n:'Growth',for:'The best place to start.',mo:'A$3,795',one:'A$4,995',hero:'30 s',re:'5',hk:'6',ca:'5',ch:'Reuse yours',ci:'Monthly call',rd:'10 work days',pick:1},
  {n:'Scale',for:'Big launches, lots of testing.',mo:'A$6,495',one:'A$8,495',hero:'30 s + 15 s',re:'8',hk:'10',ca:'8',ch:'1 a month',ci:'Call every 2 weeks',rd:'7 work days'}
@@ -549,7 +547,7 @@ list.innerHTML=P.map((p,i)=>`<article class="plan rv${p.pick?' pick':''}">
   <div class="pn"><h3>${p.n}</h3>${p.pick?'<span class="tag">Recommended</span>':''}</div>
   <p class="for">${p.for}</p>
   <div class="price" data-i="${i}">${p.mo}<small>a month</small></div>
-  <p class="alt" data-alt="${i}">Or ${p.one} as a one-off</p>
+  <p class="alt" data-alt="${i}">${p.lite?'A$2,000 + GST a month, plus A$750 + GST setup in month 1. 8 posts a month and every asset to reuse.':'Or '+p.one+' as a one-off'}</p>
   <div class="rows">
     <div>Hero ad, new idea<b>${p.hero}</b></div>
     <div>Re-cuts<b>${p.re}</b></div>
@@ -566,10 +564,10 @@ document.querySelectorAll('.toggle button').forEach(b=>b.addEventListener('click
   const m=b.dataset.mode;
   document.querySelectorAll('.toggle button').forEach(x=>x.setAttribute('aria-pressed',x===b));
   document.getElementById('tnote').textContent=NOTE[m];
-  document.querySelectorAll('.price').forEach(el=>{
+  document.querySelectorAll('.price[data-i]').forEach(el=>{
     const p=P[+el.dataset.i];el.classList.add('fade');
-    setTimeout(()=>{el.innerHTML=m==='mo'?`${p.mo}<small>a month</small>`:`${p.one}<small>one-off</small>`;
-      document.querySelector(`[data-alt="${el.dataset.i}"]`).textContent=m==='mo'?`Or ${p.one} as a one-off`:`Or ${p.mo} a month`;
+    setTimeout(()=>{el.innerHTML=(m==='mo'||!p.one)?`${p.mo}<small>a month</small>`:`${p.one}<small>one-off</small>`;
+      document.querySelector(`[data-alt="${el.dataset.i}"]`).textContent=p.lite?(m==='mo'?'A$2,000 + GST a month, plus A$750 + GST setup in month 1. 8 posts a month and every asset to reuse.':'Monthly only. 3 months minimum.'):(m==='mo'?`Or ${p.one} as a one-off`:`Or ${p.mo} a month`);
       el.classList.remove('fade');},450);
   });
 }));
@@ -611,7 +609,7 @@ addEventListener('scroll',()=>bar.classList.toggle('on',scrollY>20),{passive:tru
 document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{
   const url=new URL(b.dataset.copy,location.href).href;
   try{await navigator.clipboard.writeText(url);b.querySelector('span').textContent='Copied ✓';}catch(e){prompt('Copy this link',url);}
-  setTimeout(()=>{b.querySelector('span').textContent='Copy client link';},2400);
+  const lab=b.dataset.label||'Copy client link';setTimeout(()=>{b.querySelector('span').textContent=lab;},2400);
 }));
 })();
 </script>
